@@ -16,11 +16,11 @@ const Router = createBrowserRouter([
       },
 
       {
-        path: "/gdpr",
+        path: '/gdpr',
         element: <GDPR />,
       },
       {
-        path: "/itSikkerhed",
+        path: '/itSikkerhed',
         element: <ItSikkerhed />,
       },
     ],
