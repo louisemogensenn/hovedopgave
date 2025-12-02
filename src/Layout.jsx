@@ -1,21 +1,13 @@
-import LogoSektion from "./components/LogoSektion";
+import LogoSektion from "./components/LogoSektion.jsx";
 import Soegefelt from "./components/Soegefelt";
 import Navigation from "./components/Navigation";
 import { Outlet } from "react-router-dom";
+import BundLogo from "./components/BundLogo";
 
 export default function Layout() {
 
-    return (
-        <>
-        {/* Heri angives rammen for indholdet - altså det, der ikke ændrer sig */}
-        <LogoSektion />
-        <Soegefelt />
-        <Navigation/>
-        <main> {/* Henviser til main.jsx */}
-            <Outlet /> {/* Her indsættes det indhold, der ændrer sig */}
-        </main>
 
+        return <p style={{ fontSize: "30px", color: "red" }}>TEST Layout</p>;
 
-        </>
-    )
 }
+

@@ -1,32 +1,32 @@
-import { createBrowserRouter } from "react-router-dom";
 import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout";
 import Om from "./views/Om";
 import GDPR from "./views/GDPR";
 import ItSikkerhed from "./views/ItSikkerhed";
 
-export default function App() {
-  const Router = createBrowserRouter([{
+const Router = createBrowserRouter([
+  {
     path: "/",
     element: <Layout />,
     children: [
       {
         index: true,
-        element: <Om />
+        element: <Om />,
       },
 
       {
         path: "/gdpr",
-        element: <GDPR />
+        element: <GDPR />,
       },
       {
         path: "/itSikkerhed",
-        element: <ItSikkerhed />
-      }
-    ]
-  }]);
+        element: <ItSikkerhed />,
+      },
+    ],
+  },
+]);
 
-  return (
-    <RouterProvider router={Router} />
-  )
+export default function App() {
+  return <RouterProvider router={Router} />;
 }

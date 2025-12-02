@@ -6,6 +6,6 @@ export default function Knap( {knaptekst} ) {
         <>
         <button>{knaptekst}</button>
         </>
-    )
+    );
 }
 
