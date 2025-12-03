@@ -13,7 +13,7 @@ export default function Inputfelt({label, type}) { /* I oprettelsen af komponent
             className={mystyle.input}
           />
           <label className={`${mystyle.label} ${isActive ? mystyle.labelAktiv : ''}`}> {/* Her får label klassen label og hvis den er aktiv får den klassen labelActive */}
-            {label}
+            <p>{label}</p>
           </label>
         </div>
       );

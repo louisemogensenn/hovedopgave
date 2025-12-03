@@ -4,6 +4,11 @@ import Inputfelt from "./Inputfelt";
 export default function Soegefelt() {
 
   return (
-    <Inputfelt label="Søg" />
+    <>
+    <section className={mystyle.soegefeltSection}>
+    <Inputfelt className={mystyle.soegefelt} label="Søg" />
+    </section>
+    </>
+    
   );
 }
