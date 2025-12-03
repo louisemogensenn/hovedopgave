@@ -2,31 +2,32 @@
     margin-top: 70px;
     display: flex;
     justify-content: center;
-    position: relative;
+    position: relative; /* Gør det muligt at placere tekstfeltet ovenpå inputfeltet */
 }
 
 .input {
-    min-width: 30%;
-    padding: 1rem;
-    border: 2px solid #032478;
-    border-radius: 8px;
-    outline: none;
+    min-width: 30%; /* Bredden på inputfeltet */
+    padding: 1rem; /* Padding inden i inputfeltet - det der ligger omkring teksten */
+    border: 2px solid #032478; /* Kantform og -farve */
+    border-radius: 8px; /* Afrunding på kanter */
+    font-size: 16px; /* Størrelsen på det input, brugeren laver */
+    outline: none; /* Fjerner den blå kant, der kommer ved klik i feltet */
 }
 
 .label {
-    position: absolute;
-    left: 35%;
-    top: 1rem;
-    padding: 0 0.25rem;
-    background-color: white;
-    color: #000;
-    pointer-events: none;
-    transition: all 0.2s;
+    position: absolute; /* Gør det muligt at placere label absolut i forhold til dens container soegefelt, der har position: relative;*/
+    left: 35%; /* Placerer label samme sted i inputfeltet */
+    top: 1rem; /* Skaber en afstand til ovenstående*/
+    background-color: white; /* Får en baggrundsfarve for at sikre, at teksten i label ikke overstreges af border */
+    color: #000; /* Tekstfarven */
+    transition: all 0.2s; /* Når der klikkes ind og ud af feltet */
+    padding-left: 7px; /* Sikrer, at border ikke overstreger ord */
+    padding-right: 7px; /* Sikrer, at border ikke overstreger ord */
 }
 
 .labelAktiv {
-    top: -0.50rem;
-    font-size: 0.875rem;
-    color: #000;
+    top: -0.50rem; /* Teksten flytter sig op */
+    font-size: 0.875rem; /* Skriftstørrelsen bliver mindre */
+    color: #000; /* Skriftfarven */
 }
 
