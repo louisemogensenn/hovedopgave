@@ -1,15 +1,22 @@
+.knapOgPreview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 35px;
+    gap: 4px;
+}
+
 .knap {
     width: 126px;
     height: 39px;
     background-color: #032478;
     color: #FFF;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
 }
 
 .preview {
-    display: none;
-}
-
-.previewAktiv {
-    display: block;
     color: rgb(0, 0, 0, 0.5); /* Grå tekstfarve */
+    cursor: pointer;
 }

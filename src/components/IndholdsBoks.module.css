@@ -1,11 +1,17 @@
-.boks {
+.ydreboks {
     display: flex;
-    align-items: center;
+    justify-content: center;
+}
+
+.indreboks {
+    display: flex;
     border: 2px solid #032478;
     border-radius: 8px;
     width: 80%;
     margin-bottom: 35px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 .ikon {
@@ -13,8 +19,13 @@
     margin-right: 35px;
 }
 
+.venstre {
+    display: flex;
+    align-items: center;
+}
+
 .midte {
-    margin-top: 35px;
+    width: 75%;
 }
 
 .midte h3 {
@@ -25,5 +36,4 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 35px;
 }
