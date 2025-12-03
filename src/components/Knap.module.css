@@ -1,0 +1,15 @@
+.knap {
+    width: 126px;
+    height: 39px;
+    background-color: #032478;
+    color: #FFF;
+}
+
+.preview {
+    display: none;
+}
+
+.previewAktiv {
+    display: block;
+    color: rgb(0, 0, 0, 0.5); /* Grå tekstfarve */
+}
