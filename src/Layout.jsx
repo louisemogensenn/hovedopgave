@@ -7,6 +7,7 @@ import BundLogo from "./components/BundLogo";
 export default function Layout() {
   return (
     <>
+      <Navigation />
       <main>
         <Outlet />
         {/* Alt indholdet, der skifter ved klik - henviser til siden main */}
