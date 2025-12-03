@@ -1,0 +1,35 @@
+/* DMJX-logo i venstre side og "Trust Center - powered by .legal i højre side*/
+.logoSektion {
+    display: flex; /* Indholdet stilles på horisontal linje */
+    justify-content: space-between; /* Alt pladsen i containeren placeres MELLEM de to sektioner */
+    margin-top: 48px; /* Skaber afstand mellem toppen af siden og indholdet */
+}
+
+/* DMJX-logo */
+.kundeLogo {
+    width: 229px; /* Fast bredde på kundelogo */
+    height: 118px; /* Fast højde på kundelogo */
+}
+
+/* Trust Center - powered by .legal i højre side*/
+.trustCenterSektion {
+    display: flex; /* Indholdet stilles på horisontal linje */
+    flex-direction: column; /* Indholdet stilles på vertikal linje */
+    justify-content: center; /* Indholdet placeres i midten horisontalt */
+    align-items: center; /* Indholdet placeres i midten vertikalt */
+}
+
+/* Trust Center teskten i højre side */
+.trustCenterTekst {
+    font-family: "SpoofBold", sans-serif; /* Teksten Trust Center står med anden skrifttype */
+    font-size: 22px; /* Skriftstørrelsen på teksten Trust Center */
+}
+
+/* powered by .legal - tekst og billede i højre side */
+.poweredBySektion {
+    display: flex; /* Stilles på linje */
+    align-items: center; /* Placeres i midten af sin container horisontalt */
+    gap: 11px; /* Afstand mellem tekst og billede */
+    font-weight: 375; /* Fontens vægt */
+}
+

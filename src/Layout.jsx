@@ -7,6 +7,7 @@ import BundLogo from "./components/BundLogo";
 export default function Layout() {
   return (
     <>
+    <LogoSektion />
       <Navigation />
       <main>
         <Outlet />
