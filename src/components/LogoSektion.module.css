@@ -3,6 +3,7 @@
     display: flex; /* Indholdet stilles på horisontal linje */
     justify-content: space-between; /* Alt pladsen i containeren placeres MELLEM de to sektioner */
     margin-top: 48px; /* Skaber afstand mellem toppen af siden og indholdet */
+    align-items: center; /* Indholdet placeres i midten vertikalt */
 }
 
 /* DMJX-logo */
