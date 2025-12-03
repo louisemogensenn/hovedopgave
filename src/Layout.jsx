@@ -1,4 +1,5 @@
 import LogoSektion from "./components/LogoSektion.jsx";
+import Inputfelt from "./components/Inputfelt.jsx";
 import Soegefelt from "./components/Soegefelt";
 import Navigation from "./components/Navigation";
 import { Outlet, useLocation } from "react-router-dom";
@@ -8,6 +9,7 @@ export default function Layout() {
   return (
     <>
     <LogoSektion />
+    <Soegefelt />
       <Navigation />
       <main>
         <Outlet />
