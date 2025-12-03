@@ -1,8 +1,10 @@
 .knapOgPreview {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-right: 35px;
+    margin-left: 35px;
     gap: 4px;
 }
 

@@ -4,13 +4,22 @@ import infoikon from '../assets/infoikon.svg';
 import Knap from './Knap.jsx';
 
 export default function Indholdsboks({overskrift, tekst}) {
+
+    // const tekstIKnap = knaptekst.trim().toLowerCase(); // Fjern mellemrum og gør teksten små bogstaver
+
+    // const erDownload = tekstIKnap === "download"; // Tjek om teksten er "download" - returnerer true eller false
+    
     return (
         <>
             <section className={mystyle.ydreboks}>
-
+ {/* 
+            {erDownload &&
                 <aside>
                     <img className={mystyle.infoikon} src={infoikon} alt="Info ikon"/>
                 </aside>
+            }
+*/}
+                
 
                 <section className={mystyle.indreboks}>
 
