@@ -8,8 +8,8 @@ import BundLogo from "./components/BundLogo";
 export default function Layout() {
   return (
     <>
-    <LogoSektion />
-    <Soegefelt />
+      <LogoSektion />
+      <Soegefelt />
       <Navigation />
       <main>
         <Outlet />

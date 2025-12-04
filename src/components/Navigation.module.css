@@ -6,6 +6,12 @@
     margin-bottom: 90px;
 }
 
+.navigation a {
+    transition: all 0.3s ease;
+}
+
 .aktiv {
-    color: red !important;
+    text-decoration: underline;
+    text-decoration-color: #032478;
+    text-underline-offset: 8px;
 }

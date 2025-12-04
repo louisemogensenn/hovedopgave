@@ -11,7 +11,7 @@ const Router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        index: true,
+        path: '/om',
         element: <Om />,
       },
 

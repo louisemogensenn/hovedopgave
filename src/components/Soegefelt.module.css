@@ -23,6 +23,7 @@
     transition: all 0.2s; /* Når der klikkes ind og ud af feltet */
     padding-left: 7px; /* Sikrer, at border ikke overstreger ord */
     padding-right: 7px; /* Sikrer, at border ikke overstreger ord */
+    pointer-events: none; /* Gør, at label ikke kan klikkes på */
 }
 
 .labelAktiv {
@@ -30,4 +31,3 @@
     font-size: 0.875rem; /* Skriftstørrelsen bliver mindre */
     color: #000; /* Skriftfarven */
 }
-

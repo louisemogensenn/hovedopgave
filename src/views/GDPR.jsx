@@ -1,13 +1,27 @@
 import IndholdsBoks from "../components/IndholdsBoks";
-export default function GDPR() {
+import data from "../content.json";
 
-    const broedtekstEt = "Din Artikel 30 fortegnelse er en rapport, der giver et overblik over, hvordan persondata behandles i din virksomhed. På engelsk er betegnelsen for artikel 30 fortegnelse 'Record of Processing Activities', hvilket direkte oversættes til 'fortegnelse over behandlingsaktiviteter'. En behandlingsaktivitet refererer til en detaljeret beskrivelse af, hvordan ";
-    const broedtekstTo = "Heps";
+export default function GDPR() {
+  const gdprDokumenter = [];
+  
+  for (let i = 0; i < data.dokumenter.length; i++) {
+    const dokument = data.dokumenter[i];
+    const erGDPR = dokument.kategorier.includes("gdpr");
     
-    return (
-        <>
-        <IndholdsBoks overskrift="Artikel30-fortegnelse" tekst={broedtekstEt} />
-        <IndholdsBoks overskrift="Overskrift" tekst={broedtekstTo} />
-        </>
-    )
+    if (erGDPR) {
+      gdprDokumenter.push(
+        <IndholdsBoks 
+          key={dokument.id}
+          overskrift={dokument.overskrift}
+          tekst={dokument.beskrivelse}
+        />
+      );
+    }
+  }
+  
+  return (
+    <>
+      {gdprDokumenter}
+    </>
+  );
 }

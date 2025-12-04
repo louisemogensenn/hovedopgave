@@ -1,0 +1,124 @@
+{
+    "dokumenter": [
+      {
+        "id": 1,
+        "overskrift": "Om .legal",
+        "beskrivelse": "Dette dokument giver en grundig introduktion til .legal som virksomhed og vores mission om at gøre compliance-håndtering enkel og tilgængelig for danske virksomheder. Vi beskriver udviklingen af vores platform, vores værdier omkring transparens og datasikkerhed, samt de konkrete problemer vi løser for vores kunder. Dokumentet inkluderer også information om vores team, vores tilgang til produktudvikling baseret på kundefeedback, og vores vision for fremtiden. Du kan læse om de forskellige moduler i vores platform, hvordan vi integrerer med eksisterende systemer, og hvilke brancher vi primært betjener. Dette er det perfekte udgangspunkt for nye kunder eller partnere, der ønsker at forstå, hvem vi er, og hvorfor vi gør, hvad vi gør.",
+        "kategorier": ["om"],
+        "type": "Informationsdokument",
+        "stoerrelse": "156 KB",
+        "opdateringsdato": "2024-11-01",
+        "direkteDownload": true
+      },
+      {
+        "id": 2,
+        "overskrift": "ISO 27001 Certifikat",
+        "beskrivelse": "Dette officielle certifikat dokumenterer, at .legals informationssikkerhedsstyringssystem (ISMS) er certificeret i henhold til den internationale standard ISO/IEC 27001:2013. Certificeringen bekræfter, at vi har implementeret et systematisk og omfattende framework for at håndtere informationssikkerhed, herunder politikker, procedurer, tekniske kontroller og organisatoriske foranstaltninger. Certificeringen dækker hele vores organisation og alle kritiske forretningsprocesser, og auditeres årligt af et uafhængigt certificeringsorgan. For at få adgang til det fulde certifikat samt auditrapporter skal du indsende en formel anmodning, da disse dokumenter indeholder følsomme oplysninger om vores sikkerhedsarkitektur og kontroller.",
+        "kategorier": ["itSikkerhed"],
+        "type": "Certifikat",
+        "stoerrelse": "1.2 MB",
+        "opdateringsdato": "2024-08-01",
+        "direkteDownload": false
+      },
+      {
+        "id": 3,
+        "overskrift": "Privatlivspolitik",
+        "beskrivelse": "Denne privatlivspolitik giver en detaljeret og transparent gennemgang af, hvordan .legal indsamler, anvender, opbevarer og beskytter personoplysninger fra brugere af vores platform og services. Politikken forklarer de juridiske grundlag for vores behandling, beskriver dine rettigheder som registreret (herunder ret til indsigt, berigtigelse og sletning), og redegør for vores sikkerhedsforanstaltninger til beskyttelse af dine data. Vi gennemgår også, hvornår og hvordan vi deler data med tredjeparter, samt dine valgmuligheder omkring markedsføring og cookies. Dokumentet er skrevet i et klart og tilgængeligt sprog for at sikre, at alle kan forstå deres databeskyttelsesrettigheder.",
+        "kategorier": ["om", "gdpr"],
+        "type": "Politik",
+        "stoerrelse": "186 KB",
+        "opdateringsdato": "2024-10-28",
+        "direkteDownload": true
+      },
+      {
+        "id": 4,
+        "overskrift": "Cookie-politik",
+        "beskrivelse": "Vores cookie-politik forklarer udførligt, hvordan .legal bruger cookies og lignende sporingsteknologier på vores websites og i vores platforme. Vi beskriver de forskellige typer af cookies (nødvendige, funktionelle, analytiske og marketing-cookies), deres formål, hvor længe de opbevares, og hvilke tredjeparter der eventuelt har adgang til cookie-data. Politikken giver dig også konkret vejledning i, hvordan du kan administrere eller afvise cookies gennem din browser, samt information om konsekvenserne af at deaktivere forskellige cookie-typer. Dette dokument opdateres løbende for at afspejle ændringer i vores brug af teknologi og sikre compliance med e-Privacy direktivet.",
+        "kategorier": ["gdpr"],
+        "type": "Politik",
+        "stoerrelse": "92 KB",
+        "opdateringsdato": "2024-09-12",
+        "direkteDownload": true
+      },
+      {
+        "id": 5,
+        "overskrift": "Penetration Test Rapport",
+        "beskrivelse": "Denne omfattende rapport præsenterer resultaterne fra vores seneste eksterne penetration test, udført af et certificeret cybersikkerhedsfirma. Testen simulerer realistiske angrebsscenarier for at identificere potentielle sårbarheder i vores infrastruktur, applikationer og netværkssikkerhed. Rapporten indeholder detaljerede tekniske beskrivelser af testmetoder, fundne sårbarheder (hvis nogen), deres potentielle impact, samt dokumentation for de afhjælpende handlinger vi har implementeret. Da rapporten indeholder følsomme tekniske detaljer om vores sikkerhedsarkitektur, systemer og potentielle angrebsvektorer, kræver den en NDA (non-disclosure agreement) og specifik godkendelse fra vores sikkerhedsteam før udlevering. Vi udfører penetration tests kvartalsvis for at opretholde et højt sikkerhedsniveau.",
+        "kategorier": ["itSikkerhed"],
+        "type": "Rapport",
+        "stoerrelse": "3.7 MB",
+        "opdateringsdato": "2024-11-02",
+        "direkteDownload": false
+      },
+      {
+        "id": 6,
+        "overskrift": "Informationssikkerhedspolitik",
+        "beskrivelse": "Vores informationssikkerhedspolitik udgør det overordnede strategiske fundament for, hvordan .legal beskytter fortrolige oplysninger, sikrer systemernes integritet og opretholder tilgængeligheden af kritiske services. Politikken definerer roller og ansvar for informationssikkerhed på tværs af organisationen, beskriver vores risikovurderingsproces, fastlægger sikkerhedskrav til medarbejdere og samarbejdspartnere, og specificerer procedurer for håndtering af sikkerhedshændelser. Dokumentet dækker også emner som adgangskontrol, kryptering, netværkssikkerhed, fysisk sikkerhed, samt krav til tredjepartsleverandører. Politikken gennemgås og opdateres årligt eller ved væsentlige ændringer i trusselsbilledet eller vores forretning.",
+        "kategorier": ["itSikkerhed", "om"],
+        "type": "Politik",
+        "stoerrelse": "412 KB",
+        "opdateringsdato": "2024-10-15",
+        "direkteDownload": true
+      },
+      {
+        "id": 7,
+        "overskrift": "SOC 2 Type II Rapport",
+        "beskrivelse": "Denne uafhængige revisionsrapport dokumenterer effektiviteten af .legals kontroller relateret til sikkerhed, tilgængelighed, behandlingsintegritet, fortrolighed og databeskyttelse over en 12-måneders periode. Rapporten er udarbejdet af et certificeret revisionsfirma i henhold til American Institute of CPAs (AICPA) Trust Services Criteria og giver en dybdegående evaluering af vores operative kontroller. Type II rapporten går længere end en Type I rapport ved at teste kontrollers effektivitet over tid, ikke blot deres design. Rapporten indeholder detaljerede beskrivelser af vores systemarkitektur, kontrolmiljø, samt revisors tests og resultater. På grund af rapportens følsomme karakter og detaljerede indsigt i vores interne kontroller, kræver den en NDA og specifik forretningsmæssig begrundelse før udlevering.",
+        "kategorier": ["itSikkerhed", "gdpr"],
+        "type": "Rapport",
+        "stoerrelse": "5.1 MB",
+        "opdateringsdato": "2024-09-20",
+        "direkteDownload": false
+      },
+      {
+        "id": 8,
+        "overskrift": "Databehandleraftale (DPA)",
+        "beskrivelse": "Vores standardaftale for databehandling sikrer fuld overholdelse af GDPR-kravene og definerer de juridiske rammer for, hvordan vi behandler persondata på vegne af vores kunder. Aftalen specificerer formål, datatyper, behandlingsperioder, sikkerhedsforanstaltninger og procedurer for håndtering af databrud. Dokumentet inkluderer også standardbestemmelser for internationale dataoverførsler samt instrukser for sletning og returnering af data ved aftalens ophør. Dette er et kritisk dokument for enhver organisation, der ønsker at sikre compliance i samarbejdet med .legal som databehandler.",
+        "kategorier": ["gdpr"],
+        "type": "DPA",
+        "stoerrelse": "245 KB",
+        "opdateringsdato": "2024-11-15",
+        "direkteDownload": true
+      },
+      {
+        "id": 9,
+        "overskrift": "Virksomhedsoplysninger",
+        "beskrivelse": "Dette dokument samler alle formelle og juridiske virksomhedsoplysninger om .legal i et overskueligt format. Her finder du vores officielle virksomhedsnavn, CVR-nummer, registreret adresse, fakturaadresse, og kontaktoplysninger til forskellige afdelinger. Vi inkluderer også information om vores ledelsesstruktur, bestyrelse, ejerskab, og eventuelle datterselskaber eller associerede virksomheder. Dokumentet indeholder desuden bankinformation til betalinger, vores momsnummer, og references til vores registreringer hos relevante myndigheder. For revisorer, advokater eller andre professionelle rådgivere, der har brug for verificerede virksomhedsoplysninger i forbindelse med due diligence eller kontraktindgåelse, udgør dette dokument et centralt referencemateriale.",
+        "kategorier": ["om"],
+        "type": "Informationsdokument",
+        "stoerrelse": "78 KB",
+        "opdateringsdato": "2024-10-10",
+        "direkteDownload": true
+      },
+      {
+        "id": 10,
+        "overskrift": "Backup og Disaster Recovery Plan",
+        "beskrivelse": "Vores backup- og disaster recovery plan beskriver i detaljer de procedurer og teknologier, vi har implementeret for at sikre kontinuitet af vores services, selv i tilfælde af alvorlige hændelser som naturkatastrofer, cyberangreb, hardwarefejl eller menneskelige fejl. Planen specificerer vores backup-strategier (herunder frekvens, retention periods og geografisk distribution), recovery time objectives (RTO) og recovery point objectives (RPO) for forskellige typer af data og systemer. Vi dokumenterer også vores testprocedurer for at verificere, at backups kan genskabes succesfuldt, samt vores kommunikationsplan og rollefordeling under en krisesituation. Da dokumentet indeholder følsomme tekniske detaljer om vores infrastruktur, backup-lokationer, og sikkerhedsprocedurer, kræver det særlig godkendelse før udlevering til tredjeparter.",
+        "kategorier": ["itSikkerhed"],
+        "type": "Plan",
+        "stoerrelse": "892 KB",
+        "opdateringsdato": "2024-11-10",
+        "direkteDownload": false
+      },
+      {
+        "id": 11,
+        "overskrift": "Databehandleraftale med underleverandører",
+        "beskrivelse": "Denne standardaftale anvender .legal i vores relationer med underleverandører, der behandler persondata på vores vegne (sub-processorer). Aftalen sikrer, at kæden af databeskyttelsesansvar opretholdes hele vejen gennem vores leverandørkæde, og at alle underleverandører overholder samme strenge GDPR-krav som vi selv er underlagt. Dokumentet specificerer underleverandørens forpligtelser omkring sikkerhedsforanstaltninger, fortrolighed, assistance ved håndtering af registreredes rettigheder, anmeldelse af databrud, og samarbejde ved tilsyn fra datatilsynet. Vi inkluderer også bestemmelser om audit-rettigheder, dataoverførsel til tredjelande, og procedurer for ophør af behandling. For kunder der ønsker at gennemgå vores underleverandøraftaler som en del af deres egen due diligence proces, kræver dette dokument en formel anmodning og potentielt en NDA.",
+        "kategorier": ["gdpr"],
+        "type": "DPA",
+        "stoerrelse": "203 KB",
+        "opdateringsdato": "2024-09-25",
+        "direkteDownload": false
+      },
+      {
+        "id": 12,
+        "overskrift": "Fortegnelse over behandlingsaktiviteter",
+        "beskrivelse": "I henhold til GDPR artikel 30 fører .legal en detaljeret fortegnelse over alle vores behandlingsaktiviteter. Dette dokument giver en systematisk oversigt over hver behandlingsaktivitet, herunder formålet med behandlingen, kategorier af personoplysninger (f.eks. kontaktoplysninger, transaktionsdata, brugsstatistikker), kategorier af registrerede (kunder, medarbejdere, prospekter), kategorier af modtagere som data deles med, information om internationale dataoverførsler, samt planlagte slettefrister. For hver aktivitet dokumenterer vi også det juridiske grundlag for behandlingen (samtykke, kontraktopfyldelse, legitim interesse osv.) og de tekniske og organisatoriske sikkerhedsforanstaltninger, vi har implementeret. Denne fortegnelse er et levende dokument, der opdateres løbende, og som udgør et centralt værktøj i vores compliance-arbejde. Adgang til den fulde fortegnelse kræver anmodning, da den indeholder detaljeret information om vores databehandlingspraksis.",
+        "kategorier": ["gdpr"],
+        "type": "Rapport",
+        "stoerrelse": "318 KB",
+        "opdateringsdato": "2024-11-20",
+        "direkteDownload": false
+      }
+    ]
+  }
