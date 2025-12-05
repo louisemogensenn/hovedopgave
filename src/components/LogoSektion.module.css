@@ -1,9 +1,15 @@
 /* DMJX-logo i venstre side og "Trust Center - powered by .legal i højre side*/
+.ydreArticle {
+    display: flex;
+    justify-content: center;
+}
+
 .logoSektion {
     display: flex; /* Indholdet stilles på horisontal linje */
     justify-content: space-between; /* Alt pladsen i containeren placeres MELLEM de to sektioner */
     margin-top: 48px; /* Skaber afstand mellem toppen af siden og indholdet */
     align-items: center; /* Indholdet placeres i midten vertikalt */
+    width: 90%;
 }
 
 /* DMJX-logo */

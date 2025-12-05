@@ -1,9 +1,14 @@
-.navigation {
+.ydreSektion {
     display: flex;
     justify-content: center;
-    gap: 200px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
     margin-top: 35px;
     margin-bottom: 90px;
+    width: 90%;
 }
 
 .navigation a {

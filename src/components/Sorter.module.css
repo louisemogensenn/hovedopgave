@@ -1,0 +1,11 @@
+.ydreArticle {
+    display: flex;
+    justify-content: center;
+}
+
+.sorter {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    margin-bottom: 22px;
+}
