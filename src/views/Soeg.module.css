@@ -1,0 +1,29 @@
+.soegeside {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.placeholder {
+    color: #666;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.soegeside h2 {
+    color: #032478;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.resultater {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.soegeside p {
+    color: #666;
+    font-size: 1rem;
+}

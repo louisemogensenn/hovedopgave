@@ -1,12 +1,24 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import mystyle from "./Navigation.module.css";
 import data from "../content.json";
+import { useState, useEffect } from 'react';
 
 export default function Navigation() {
   const lokation = useLocation();
+  const navigate = useNavigate();
   const sti = lokation.pathname;
-  const kategorier = []; // Et tomt array hvori alle kategorier skal gemmes
+  const [isActive, setIsActive] = useState(false); // State for at styre label-aktivitet
+  const [soegeTekst, setSoegeTekst] = useState(''); // State for at gemme søgeteksten
+
+  // Tømmer søgefeltet
+useEffect(() => {
+  if (sti !== '/soeg') {
+    setSoegeTekst('');
+    setIsActive(false);
+  }
+}, [sti]);
   
+  const kategorier = []; // Et tomt array hvori alle kategorier skal gemmes
   for (let i = 0; i < data.dokumenter.length; i++) { // Løber igennem json-filens dokumenter. Dokumenter er et array i content.json der indeholdet et antal dokument-objekter
     const dokument = data.dokumenter[i]; // Der oprettes en konstant, der gemmer objektinformationerne for hvert dokument
     for (let j = 0; j < dokument.kategorier.length; j++) { // Løber det nuværende dokuments kategorier
@@ -17,14 +29,13 @@ export default function Navigation() {
       }
     }
   }
-  
+
   const links = []; // Et tomt array, der skal indholde navigationens links
   for (let i = 0; i < kategorier.length; i++) { // Løber igennem alle kategoierne i arrayet 
     const kategori = kategorier[i]; // Opretter en konstant, der gemmer den nuværende kategori
     const urlKategori = kategori.replace(/-/g, ''); // Fjerner bindestreger fra kategorinavnet for at lave URL-venlig sti
-    const erAktiv = sti === `/${urlKategori}`; // Opretter en konstant, der tjekker om den nuværende sti matcher kategorien, der er klikket på. Backticks ` `bruges i stedet for normale citationstegn og ${variabel} indsætter værdien af variablen inde i strengen
+    const erAktiv = sti === `/${urlKategori}`; // Opretter en konstant, der tjekker om den nuværende sti matcher kategorien, der er klikket på. Backticks bruges i stedet for normale citationstegn og ${variabel} indsætter værdien af variablen inde i strengen
     const klasseNavn = erAktiv ? mystyle.aktiv : ""; // Opretter en konstnt, der får tildelt værdien aktiv, hvis erAktiv er true - ellers en tom streng. Dette er en ternær operator.
-    
     links.push( // Tilføjer et link-element til links-arrayet
       <Link 
         key={kategori} /* Sikrer, at dette link er unikt */
@@ -34,9 +45,38 @@ export default function Navigation() {
       </Link>
     );
   }
-  
+
+  // Håndter når man klikker i søgefeltet
+  const haandterFocus = () => {
+    setIsActive(true);
+    navigate('/soeg'); // Naviger til søgeview
+  };
+
+  // Håndter når man skriver i søgefeltet
+  const haandterSoegning = (event) => {
+    const tekst = event.target.value;
+    setSoegeTekst(tekst);
+    navigate('/soeg', { state: { soegeTekst: tekst } }); // Naviger til søgeview med søgetekst
+  };
+
   return (
     <>
+      {/* Søgefelt */}
+      <section className={mystyle.soegefelt}>
+        <input 
+          className={mystyle.input} 
+          type="text" 
+          value={soegeTekst}
+          onChange={haandterSoegning}
+          onFocus={haandterFocus}
+          onBlur={() => setIsActive(soegeTekst.length > 0)}
+        />
+        <label className={`${mystyle.label} ${isActive ? mystyle.labelAktiv : ''}`}>
+          <p>SØG</p>
+        </label>
+      </section>
+
+      {/* Navigation */}
       <section className={mystyle.ydreSektion}>
         <nav className={mystyle.navigation}>
           {links} {/* Returnerer arrayet */}

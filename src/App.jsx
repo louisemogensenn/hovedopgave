@@ -4,6 +4,7 @@ import Layout from "./Layout";
 import Om from "./views/Om";
 import GDPR from "./views/GDPR";
 import ItSikkerhed from "./views/ItSikkerhed";
+import Soeg from "./views/Soeg";
 
 const Router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const Router = createBrowserRouter([
       {
         path: '/itSikkerhed',
         element: <ItSikkerhed />,
+      },
+      {
+        path: 'soeg',
+        element: <Soeg />
       },
     ],
   },

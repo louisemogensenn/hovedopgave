@@ -1,3 +1,39 @@
+/* Søgefelt styling */
+.soegefelt {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    position: relative; /* Gør det muligt at placere tekstfeltet ovenpå inputfeltet */
+}
+
+.input {
+    min-width: 30%; /* Bredden på inputfeltet */
+    padding: 1rem; /* Padding inden i inputfeltet - det der ligger omkring teksten */
+    border: 2px solid #032478; /* Kantform og -farve */
+    border-radius: 8px; /* Afrunding på kanter */
+    font-size: 16px; /* Størrelsen på det input, brugeren laver */
+    outline: none; /* Fjerner den blå kant, der kommer ved klik i feltet */
+}
+
+.label {
+    position: absolute; /* Gør det muligt at placere label absolut i forhold til dens container soegefelt, der har position: relative;*/
+    left: 35%; /* Placerer label samme sted i inputfeltet */
+    top: 1rem; /* Skaber en afstand til ovenstående*/
+    background-color: white; /* Får en baggrundsfarve for at sikre, at teksten i label ikke overstreges af border */
+    color: #000; /* Tekstfarven */
+    transition: all 0.2s; /* Når der klikkes ind og ud af feltet */
+    padding-left: 7px; /* Sikrer, at border ikke overstreger ord */
+    padding-right: 7px; /* Sikrer, at border ikke overstreger ord */
+    pointer-events: none; /* Gør, at label ikke kan klikkes på */
+}
+
+.labelAktiv {
+    top: -0.50rem; /* Teksten flytter sig op */
+    font-size: 0.875rem; /* Skriftstørrelsen bliver mindre */
+    color: #000; /* Skriftfarven */
+}
+
+/* Navigation styling */
 .ydreSektion {
     display: flex;
     justify-content: center;

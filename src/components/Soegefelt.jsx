@@ -4,40 +4,23 @@ import data from "../content.json";
 import IndholdsBoks from "./IndholdsBoks";
 
 export default function Soegefelt() {
-  const [isActive, setIsActive] = useState(false);
-  const [soegeTekst, setSoegeTekst] = useState('');
-  
-  const haandterSoegning = (event) => {
-    const tekst = event.target.value;
-    setSoegeTekst(tekst);
+  const [isActive, setIsActive] = useState(false); // State for at styre label-aktivitet (om den er aktiv og derfor oppe eller om den er nede)
+  const [soegeTekst, setSoegeTekst] = useState(''); // State for at gemme søgeteksten. Søgeteksten er tom i starten
+
+  // En funktion til at håndtere søgningen
+  const haandterSoegning = (event) => { // Når funktionen kaldes får den et event-objekt. Eventobjektet er med pilesyntaxen angivet under neden
+    const tekst = event.target.value; // En konstant gemmer den værdi, brugeren skriver i søgefeltet
+    setSoegeTekst(tekst); // Søgeteksten bliver opdateret med den nye værdi med funktionen setSoegeTekst
   };
-  
-  // Funktion der markerer søgeordet i teksten
-  const markerSoegeord = (tekst, soegeord) => {
-    if (soegeord.length === 0) return tekst;
-    
-    const regex = new RegExp(`(${soegeord})`, 'gi');
-    const dele = tekst.split(regex);
-    
-    return dele.map((del, index) => {
-      const erMatch = del.toLowerCase() === soegeord.toLowerCase();
-      if (erMatch) {
-        return <strong key={index}>{del}</strong>;
-      }
-      return del;
-    });
-  };
-  
+
   // Find dokumenter der matcher søgningen
   const soegeresultater = [];
-  
   if (soegeTekst.length > 0) {
     for (let i = 0; i < data.dokumenter.length; i++) {
       const dokument = data.dokumenter[i];
       const soegeTekstLower = soegeTekst.toLowerCase();
       const overskriftLower = dokument.overskrift.toLowerCase();
       const beskrivelseLower = dokument.beskrivelse.toLowerCase();
-      
       const findesIOverskrift = overskriftLower.includes(soegeTekstLower);
       const findesIBeskrivelse = beskrivelseLower.includes(soegeTekstLower);
       
@@ -45,14 +28,14 @@ export default function Soegefelt() {
         soegeresultater.push(
           <IndholdsBoks 
             key={dokument.id}
-            overskrift={markerSoegeord(dokument.overskrift, soegeTekst)}
-            tekst={markerSoegeord(dokument.beskrivelse, soegeTekst)}
+            overskrift={dokument.overskrift}
+            tekst={dokument.beskrivelse}
           />
         );
       }
     }
   }
-  
+
   return (
     <>
       <section className={mystyle.soegefelt}>
@@ -68,7 +51,7 @@ export default function Soegefelt() {
           <p>SØG</p>
         </label>
       </section>
-      
+
       {soegeTekst.length > 0 && (
         <section className={mystyle.resultater}>
           {soegeresultater.length > 0 ? (
