@@ -48,6 +48,7 @@ export default function Soeg() {
                 key={dokument.id}
                 overskrift={dokument.overskrift}
                 tekst={dokument.beskrivelse}
+                dokument={dokument}
               />
             ))}
           </div>
@@ -61,6 +62,7 @@ export default function Soeg() {
                 key={dokument.id}
                 overskrift={dokument.overskrift}
                 tekst={dokument.beskrivelse}
+                dokument={dokument}
               />
             ))}
           </div>

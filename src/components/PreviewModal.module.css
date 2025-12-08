@@ -1,0 +1,84 @@
+/* Mørk baggrund der dækker hele skærmen */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  /* Modal-boksen i midten */
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 1001;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Luk-knap i øverste højre hjørne */
+  .lukKnap {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    padding: 0.5rem;
+    line-height: 1;
+  }
+  
+  .lukKnap:hover {
+    color: #032478;
+  }
+  
+  /* Preview styling */
+  .preview {
+    margin-top: 1.5rem;
+  }
+  
+  .preview p {
+    margin: 0.5rem 0;
+    color: #333;
+  }
+  
+  .beskrivelse {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+  }
+  
+  .beskrivelse h3 {
+    margin-top: 0;
+    color: #032478;
+  }
+  
+  .downloadKnap {
+    width: 100%;
+    padding: 1rem;
+    background-color: #032478;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 1.5rem;
+  }
+  
+  .downloadKnap:hover {
+    background-color: #02183d;
+  }

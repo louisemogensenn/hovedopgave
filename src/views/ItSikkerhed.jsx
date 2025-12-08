@@ -14,6 +14,7 @@ export default function ItSikkerhed() {
           key={dokument.id}
           overskrift={dokument.overskrift}
           tekst={dokument.beskrivelse}
+          dokument={dokument}
         />
       );
     }
