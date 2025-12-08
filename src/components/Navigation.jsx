@@ -10,13 +10,13 @@ export default function Navigation() {
   const [isActive, setIsActive] = useState(false); // State for at styre label-aktivitet
   const [soegeTekst, setSoegeTekst] = useState(''); // State for at gemme søgeteksten
 
-  // Tømmer søgefeltet
-useEffect(() => {
-  if (sti !== '/soeg') {
-    setSoegeTekst('');
-    setIsActive(false);
-  }
-}, [sti]);
+  // Tømmer søgefeltet, når brugeren klikker væk fra søgesiden
+  useEffect(() => {
+    if (sti !== '/soeg') {
+      setSoegeTekst('');
+      setIsActive(false);
+    }
+  }, [sti]);
   
   const kategorier = []; // Et tomt array hvori alle kategorier skal gemmes
   for (let i = 0; i < data.dokumenter.length; i++) { // Løber igennem json-filens dokumenter. Dokumenter er et array i content.json der indeholdet et antal dokument-objekter

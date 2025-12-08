@@ -11,9 +11,12 @@ export default function Soeg() {
 
   // useEffect kører hver gang soegeTekst ændrer sig
   useEffect(() => {
-    // Hvis der ikke er søgetekst, vis ingenting
+    // Hvis der ikke er søgetekst, vis alle dokumenter i alfabetisk rækkefølge
     if (soegeTekst.length === 0) {
-      setResultater([]);
+      const alleDokumenter = [...data.dokumenter].sort((a, b) => 
+        a.overskrift.localeCompare(b.overskrift, 'da')
+      );
+      setResultater(alleDokumenter);
       return;
     }
 
@@ -37,7 +40,18 @@ export default function Soeg() {
   return (
     <div className={styles.soegeside}>
       {soegeTekst.length === 0 ? (
-        <p className={styles.placeholder}>Begynd at skrive for at søge...</p>
+        <>
+          <h2>Alle dokumenter ({resultater.length})</h2>
+          <div className={styles.resultater}>
+            {resultater.map(dokument => (
+              <IndholdsBoks 
+                key={dokument.id}
+                overskrift={dokument.overskrift}
+                tekst={dokument.beskrivelse}
+              />
+            ))}
+          </div>
+        </>
       ) : resultater.length > 0 ? (
         <>
           <h2>Fundet {resultater.length} resultater</h2>

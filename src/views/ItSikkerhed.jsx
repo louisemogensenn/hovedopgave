@@ -6,7 +6,7 @@ export default function ItSikkerhed() {
   
   for (let i = 0; i < data.dokumenter.length; i++) {
     const dokument = data.dokumenter[i];
-    const erItSikkerhed = dokument.kategorier.includes("itSikkerhed");
+    const erItSikkerhed = dokument.kategorier.includes("it-sikkerhed");
     
     if (erItSikkerhed) {
       itSikkerhedDokumenter.push(
