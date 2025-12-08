@@ -1,97 +1,69 @@
-/* Mørk baggrund der dækker hele skærmen */
 .overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
 }
 
-/* Modal-boksen i midten */
 .modal {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  padding: 2rem;
+  padding: 125px;
   border-radius: 8px;
-  max-width: 600px;
-  width: 90%;
-  max-height: 80vh;
-  overflow-y: auto;
+  width: 600px;
   z-index: 1001;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Luk-knap i øverste højre hjørne */
 .lukKnap {
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  left: 1rem;
   background: none;
   border: none;
-  font-size: 1.5rem;
   cursor: pointer;
-  color: #666;
-  padding: 0.5rem;
-  line-height: 1;
 }
 
-.lukKnap:hover {
-  color: #032478;
+.modal h2 {
+  display: inline;
+  margin-right: 0.5rem;
 }
 
-/* Form styling */
-.form {
+.modalOverskrifter {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.form label {
+.oeversteOverskrift {
+  color: #000 !important;
+}
+
+.inputfelter {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  font-weight: 500;
-  color: #032478;
+  margin-top: 40px;
 }
 
-.form input,
-.form textarea {
-  padding: 0.75rem;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  font-size: 16px;
-  font-family: inherit;
-  outline: none;
+.modal form input,
+.modal form textarea {
+  width: 100% !important;
+  margin-bottom: 35px;
+  box-sizing: border-box;
 }
 
-.form input:focus,
-.form textarea:focus {
-  border-color: #032478;
+.knapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
-.form textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-.sendKnap {
-  padding: 1rem;
-  background-color: #032478;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  margin-top: 0.5rem;
-}
-
-.sendKnap:hover {
-  background-color: #02183d;
+.knapper button {
+  padding: 10px 25px !important;
+  white-space: nowrap; /* Forhindrer tekst i at gå over to linjer */
+  min-width: fit-content; /* Lader knappen tilpasse sig teksten */
 }

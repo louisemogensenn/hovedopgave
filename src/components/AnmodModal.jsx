@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
 import mystyle from './AnmodModal.module.css';
+import Inputfelt from './Inputfelt';
+import Knap from './Knap';
+import Kryds from '../assets/kryds.svg';
 
 export default function AnmodModal({ erAaben, luk, overskrift }) {
-  // Luk modal ved tryk på Escape
   useEffect(() => {
     const haandterEscape = (event) => {
       if (event.key === 'Escape') {
@@ -21,57 +23,40 @@ export default function AnmodModal({ erAaben, luk, overskrift }) {
 
   const haandterIndsendelse = (event) => {
     event.preventDefault();
-    console.log("Anmodning sendt for:", overskrift);
     luk();
   };
 
-  // Hvis modal ikke er åben, vis ingenting
   if (!erAaben) return null;
 
   return (
     <>
-      {/* Mørk baggrund */}
       <div className={mystyle.overlay} onClick={luk}></div>
       
-      {/* Modal-boks */}
       <div className={mystyle.modal}>
-        {/* Luk-knap */}
+
         <button className={mystyle.lukKnap} onClick={luk}>
-          ✕
+          <img src={Kryds} alt="Luk" />
         </button>
         
-        <h2>Anmod om adgang til {overskrift}</h2>
-        <p>Dette dokument kræver godkendelse. Udfyld formularen for at anmode om adgang.</p>
+        <section className={mystyle.modalOverskrifter}>
+          <h2 className={mystyle.oeversteOverskrift}>ANMOD OM ADGANG TIL</h2>
+          <h2>{overskrift}</h2>
+        </section>
         
-        <form onSubmit={haandterIndsendelse} className={mystyle.form}>
-          <label>
-            Navn
-            <input type="text" placeholder="Dit fulde navn" required />
-          </label>
-          
-          <label>
-            Email
-            <input type="email" placeholder="din@email.dk" required />
-          </label>
-          
-          <label>
-            Virksomhed
-            <input type="text" placeholder="Virksomhedsnavn" required />
-          </label>
-          
-          <label>
-            Formål
-            <textarea 
-              placeholder="Beskriv hvorfor du har brug for adgang til dette dokument" 
-              rows="4"
-              required
-            ></textarea>
-          </label>
-          
-          <button type="submit" className={mystyle.sendKnap}>
-            Send anmodning
-          </button>
+        <p>Vores <span>{overskrift}</span> er begrænset i den offentlige adgang, og derfor skal denne anmodes om eksplicit. Indtast dine oplysninger og angiv din årsag til adgangsanmodningen. Vi gennemlæser din anmonding inden for 24 timer, og svar samt eventuelt dokumentation sendes på til den angivne mail.</p>
+        
+        <form className={mystyle.inputfelter}>
+          <Inputfelt className={mystyle.specialInputfelt} label="NAVN" type="text" />
+          <Inputfelt className={mystyle.specialInputfelt} label="VIRKSOMHED" type="text" />
+          <Inputfelt className={mystyle.specialInputfelt} label="E-MAIL" type="email" />
+          <Inputfelt className={mystyle.specialInputfelt} label="ANMODNING" type="textarea" />
         </form>
+          
+          <aside className={mystyle.knapper}>
+            <Knap className={mystyle.knap} knaptekst="Afbryd" onClick={luk} />
+            <Knap className={mystyle.knap} knaptekst="Send anmodning" />
+          </aside>
+        
       </div>
     </>
   );
