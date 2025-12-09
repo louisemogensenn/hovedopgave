@@ -1,8 +1,8 @@
 /* Søgefelt styling */
 .soegefelt {
-    margin-top: 70px;
-    display: flex;
-    justify-content: center;
+    margin-top: 70px; /* Søgefeltet placeres 70 px fra ovenstående */
+    display: flex; /* Søgefeltet er i flex for at centrere det */
+    justify-content: center; /* Søgefeltet centreres */
     position: relative; /* Gør det muligt at placere tekstfeltet ovenpå inputfeltet */
 }
 
@@ -35,25 +35,21 @@
 
 /* Navigation styling */
 .ydreSektion {
-    display: flex;
-    justify-content: center;
+    display: flex; /* Indholdet stilles på linje */
+    justify-content: center; /* Indholdet placeres i midten af containeren */
 }
 
 .navigation {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 35px;
-    margin-bottom: 90px;
-    width: 90%;
-    cursor: pointer;
-}
-
-.navigation a {
-    transition: all 0.3s ease;
+    display: flex; /* Indholdet placeres på linje */
+    justify-content: space-between; /* Indholdet placeres med pladsen imellem sig */
+    margin-top: 35px; /* Indholdet placeres med 35px til ovenstående */
+    margin-bottom: 90px; /* Indholdet placeres med 90px afstand til nedenstående */
+    width: 90%; /* Bredden på indholdet for at skabe padding i siderne */
+    cursor: pointer; /* Tydeliggør klikbarhed ved hover */
 }
 
 .aktiv {
-    text-decoration: underline;
-    text-decoration-color: #032478;
-    text-underline-offset: 8px;
+    text-decoration: underline; /* Når linket er aktuelt angives dette med underline */
+    text-decoration-color: #032478; /* Farven på underline bliver blå */
+    text-underline-offset: 8px; /* Underline placeres 8px fra teksten */
 }

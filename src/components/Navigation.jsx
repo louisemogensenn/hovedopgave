@@ -12,11 +12,11 @@ export default function Navigation() {
 
   // Tømmer søgefeltet, når brugeren klikker væk fra søgesiden
   useEffect(() => {
-    if (sti !== '/soeg') {
-      setSoegeTekst('');
-      setIsActive(false);
+    if (sti !== '/soeg') { // Hvis brugeren ikke er på søgesiden - altså hvis stien ikke er /soeg
+      setSoegeTekst(''); // Skal søgeteksten være tom
+      setIsActive(false); // Og staten isActive skal være false
     }
-  }, [sti]);
+  }, [sti]); // useEffect krer hver gang stien ændrer sig
   
   const kategorier = []; // Et tomt array hvori alle kategorier skal gemmes
   for (let i = 0; i < data.dokumenter.length; i++) { // Løber igennem json-filens dokumenter. Dokumenter er et array i content.json der indeholdet et antal dokument-objekter
@@ -25,7 +25,7 @@ export default function Navigation() {
       const kategori = dokument.kategorier[j]; // Gemmer det nuværende dokuments kategori eller kategorier i en konstant
       const kategoriFindesIkke = !kategorier.includes(kategori); // Tjekker om kategorien allerede findes i arrayet. Hvis ikke gemmes kategorien
       if (kategoriFindesIkke) { // Hvis denne konstant har en værdi af true, tilføjes kategorien til arrayet
-        kategorier.push(kategori); // .push tilføjer et nyt element til slutningen af et array
+        kategorier.push(kategori); // .push tilføjer et nyt element til slutningen af et array - her arrayet kategorier
       }
     }
   }
@@ -48,7 +48,7 @@ export default function Navigation() {
 
   // Håndter når man klikker i søgefeltet
   const haandterFocus = () => {
-    setIsActive(true);
+    setIsActive(true); // Opdaterer værdien for isActive med setIsActive til true
     navigate('/soeg'); // Naviger til søgeview
   };
 
@@ -63,15 +63,8 @@ export default function Navigation() {
     <>
       {/* Søgefelt */}
       <section className={mystyle.soegefelt}>
-        <input 
-          className={mystyle.input} 
-          type="text" 
-          value={soegeTekst}
-          onChange={haandterSoegning}
-          onFocus={haandterFocus}
-          onBlur={() => setIsActive(soegeTekst.length > 0)}
-        />
-        <label className={`${mystyle.label} ${isActive ? mystyle.labelAktiv : ''}`}>
+        <input className={mystyle.input} type="text" value={soegeTekst} onChange={haandterSoegning} onFocus={haandterFocus} onBlur={() => setIsActive(soegeTekst.length > 0)} />
+        <label className={`${mystyle.label} ${isActive ? mystyle.labelAktiv : ''}`}> {/* Tildeler klassen label og hvis klassen er altiv får den også klassen Aktiv tilføjet */}
           <p>SØG</p>
         </label>
       </section>

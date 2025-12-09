@@ -5,26 +5,6 @@ import Knap from './Knap';
 import Kryds from '../assets/kryds.svg';
 
 export default function AnmodModal({ erAaben, luk, overskrift }) {
-  useEffect(() => {
-    const haandterEscape = (event) => {
-      if (event.key === 'Escape') {
-        luk();
-      }
-    };
-
-    if (erAaben) {
-      document.addEventListener('keydown', haandterEscape);
-    }
-
-    return () => {
-      document.removeEventListener('keydown', haandterEscape);
-    };
-  }, [erAaben, luk]);
-
-  const haandterIndsendelse = (event) => {
-    event.preventDefault();
-    luk();
-  };
 
   if (!erAaben) return null;
 
@@ -46,10 +26,10 @@ export default function AnmodModal({ erAaben, luk, overskrift }) {
         <p>Vores <span>{overskrift}</span> er begrænset i den offentlige adgang, og derfor skal denne anmodes om eksplicit. Indtast dine oplysninger og angiv din årsag til adgangsanmodningen. Vi gennemlæser din anmonding inden for 24 timer, og svar samt eventuelt dokumentation sendes på til den angivne mail.</p>
         
         <form className={mystyle.inputfelter}>
-          <Inputfelt className={mystyle.specialInputfelt} label="NAVN" type="text" />
-          <Inputfelt className={mystyle.specialInputfelt} label="VIRKSOMHED" type="text" />
-          <Inputfelt className={mystyle.specialInputfelt} label="E-MAIL" type="email" />
-          <Inputfelt className={mystyle.specialInputfelt} label="ANMODNING" type="textarea" />
+          <Inputfelt label="NAVN" type="text" />
+          <Inputfelt label="VIRKSOMHED" type="text" />
+          <Inputfelt label="E-MAIL" type="email" />
+          <Inputfelt label="ANMODNING" type="textarea" />
         </form>
           
           <aside className={mystyle.knapper}>

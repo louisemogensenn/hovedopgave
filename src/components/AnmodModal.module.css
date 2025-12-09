@@ -11,32 +11,29 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  padding: 125px;
+  padding: 75px 125px;
   border-radius: 8px;
   width: 600px;
   z-index: 1001;
+  border: 1px solid #032478;
 }
 
 .lukKnap {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 30px;
+  left: 125px;
   background: none;
   border: none;
   cursor: pointer;
 }
 
-.modal h2 {
-  display: inline;
-  margin-right: 0.5rem;
-}
-
 .modalOverskrifter {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  justify-content: center;
+  gap: 10px;
   align-items: center;
+  margin-bottom: 35px;
+  color: #032478;
 }
 
 .oeversteOverskrift {
@@ -49,10 +46,9 @@
   margin-top: 40px;
 }
 
-.modal form input,
-.modal form textarea {
+.modal form input {
   width: 100% !important;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   box-sizing: border-box;
 }
 
