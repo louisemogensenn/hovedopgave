@@ -10,9 +10,9 @@ export default function AnmodModal({ erAaben, luk, overskrift }) {
 
   return (
     <>
-      <div className={mystyle.overlay} onClick={luk}></div>
+      <section className={mystyle.overlay} onClick={luk}></section>
       
-      <div className={mystyle.modal}>
+      <section className={mystyle.modal}>
 
         <button className={mystyle.lukKnap} onClick={luk}>
           <img src={Kryds} alt="Luk" />
@@ -37,7 +37,7 @@ export default function AnmodModal({ erAaben, luk, overskrift }) {
             <Knap className={mystyle.knap} knaptekst="Send anmodning" />
           </aside>
         
-      </div>
+      </section>
     </>
   );
 }

@@ -11,9 +11,8 @@
   left: 50%; /* Centrerer horisontalt */
   transform: translate(-50%, -50%); /* Justerer positionen for perfekt centrering */
   background: white; /* Hvid baggrund for modal vinduet */
-  padding: 75px 125px; /* Indvendig afstand */
+  padding: 75px 80px; /* Indvendig afstand */
   border-radius: 8px; /* Runde hjørner */
-  width: 600px; /* Fast bredde */
   z-index: 1001; /* Sørger for at modal vinduet er over overlayet */
   border: 1px solid #032478; /* Blå kant */
 }
@@ -21,7 +20,7 @@
 .lukKnap {
   position: absolute; /* Gør knappen fast i modal vinduet */
   top: 30px; /* Afstand fra toppen */
-  left: 125px; /* Afstand fra venstre */
+  left: 80px; /* Afstand fra venstre */
   background: none; /* Ingen baggrund */
   border: none; /* Ingen kant */
   cursor: pointer; /* Gør cursoren til en pointer ved hover */
