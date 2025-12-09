@@ -70,4 +70,5 @@ p {
   #root > *:not(.mobilAdvarsel) {
     display: none;
   }
+  /* I div'en med id'et root gælder for alle (*) elementer - undtaget .mobilAdvarsel */
 }
