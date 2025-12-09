@@ -1,7 +1,5 @@
-
-.soegeside h2 {
-    color: #032478;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+.tekst {
+    margin-bottom: 10px; /* Afstand mellem overskrift og indholdsboks */
+    margin-left: 5%; /* Sikrer allignment med indholdsbokse */
     margin-top: -55px; /* Sikrer, at alle tekstbokse alligner*/
 }

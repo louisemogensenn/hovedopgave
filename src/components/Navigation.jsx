@@ -38,10 +38,10 @@ export default function Navigation() {
     const klasseNavn = erAktiv ? mystyle.aktiv : ""; // Opretter en konstnt, der får tildelt værdien aktiv, hvis erAktiv er true - ellers en tom streng. Dette er en ternær operator.
     links.push( // Tilføjer et link-element til links-arrayet
       <Link 
-        key={kategori} /* Sikrer, at dette link er unikt */
+        key={kategori} /* Sikrer, at dette link er unikt - kategori får værdi fra const kategorier[i] */
         to={`/${urlKategori}`} /* Bruger backticks og $ til at omskrive til tekststreng uden bindestreger */
         className={klasseNavn}> {/* Giver klassen klasseNavn */}
-        <h2>{kategori.toUpperCase()}</h2>
+        <h2>{kategori.toUpperCase()}</h2> {/* Angiver kategorien i caps (store bogstaver) */}
       </Link>
     );
   }
@@ -53,10 +53,10 @@ export default function Navigation() {
   };
 
   // Håndter når man skriver i søgefeltet
-  const haandterSoegning = (event) => {
-    const tekst = event.target.value;
-    setSoegeTekst(tekst);
-    navigate('/soeg', { state: { soegeTekst: tekst } }); // Naviger til søgeview med søgetekst
+  const haandterSoegning = (event) => { // Event er det der sker - i dette tilfælde når brugeren skriver i søgefeltet
+    const tekst = event.target.value; // Gemmer den tekst brugeren skriver i en konstant
+    setSoegeTekst(tekst); // Opdaterer søgeteksten med den tekst brugeren skriver
+    navigate('/soeg', { state: { soegeTekst: tekst } }); // Naviger til søgeview med søgetekst via .state, der kan tilgås i Soeg.jsx
   };
 
   return (
