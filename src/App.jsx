@@ -9,24 +9,24 @@ import Soeg from "./views/Soeg";
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <Layout />, // Layout-komponenten bruges som det overordnede layout - altså den ramme om indholder, der altid vises
     children: [
       {
         path: '/om',
-        element: <Om />,
+        element: <Om />, // Komponentet Om vises, når brugeren navigerer til /om
       },
 
       {
         path: '/gdpr',
-        element: <GDPR />,
+        element: <GDPR />, // Komponentet GDPR vises, når brugeren navigerer til /gdpr
       },
       {
         path: '/itSikkerhed',
-        element: <ItSikkerhed />,
+        element: <ItSikkerhed />, // Komponentet ItSikkerhed vises, når brugeren navigerer til /itSikkerhed
       },
       {
         path: 'soeg',
-        element: <Soeg />
+        element: <Soeg /> // Komponentet Soeg vises, når brugeren navigerer til /soeg
       },
     ],
   },

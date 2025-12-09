@@ -8,11 +8,10 @@ export default function Layout() {
   return (
     <>
       <LogoSektion />
-      <Navigation /> {/* Indeholder nu både søgefelt og navigationlinks */}
+      <Navigation /> 
       <Sorter />
       <main>
-        <Outlet />
-        {/* Alt indholdet, der skifter ved klik - henviser til siden main */}
+        <Outlet /> {/* Alt indholdet, der skifter ved klik - henviser til siden main */}
       </main>
       <BundLogo />
     </>
