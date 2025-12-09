@@ -36,3 +36,23 @@
 .hoejre {
     display: flex; /* Placerer elementer på linje */
 }
+
+.tekstBeskaaret {
+    display: -webkit-box; /* Bruger flexbox model */
+    -webkit-line-clamp: 3; /* Viser kun 3 linjer */
+    -webkit-box-orient: vertical; /* Sætter orientering til vertikal */
+    overflow: hidden; /* Skjuler overskydende tekst */
+    text-overflow: ellipsis; /* Tilføjer ... i slutningen */
+  }
+  
+  .laesMereKnap {
+    background: none; /* Gør baggrunden gennemsigtig */
+    border: none; /* Fjerner kant */
+    color: rgb(0, 0, 0, 0.5); /* Grå tekstfarve */
+    cursor: pointer; /* Angiver at det er klikbart */
+    font-size: inherit;
+  }
+
+  .laesMereKnap:hover {
+    text-decoration: underline; /* Understreger teksten ved hover */
+  }
