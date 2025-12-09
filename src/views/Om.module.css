@@ -1,0 +1,104 @@
+.ydreboks {
+    display: flex; /* Placerer elementer på linje */
+    justify-content: center; /* Centrerer indholdet horisontalt */
+}
+
+.indreboks {
+    display: flex; /* Placerer elementer på linje */
+    align-items: center; /* Centrerer indholdet vertikalt */
+    border: 2px solid #032478; /* Tilføj kant */
+    border-radius: 8px; /* Runder hjørnerne */
+    width: 90%; /* Sætter bredden til 90% */
+    margin-bottom: 35px; /* Tilføjer afstand under elementet */
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); /* Tilføjer skygge */
+    padding-top: 35px; /* Tilføjer padding øverst */
+    padding-bottom: 35px; /* Tilføj padding nederst */
+}
+
+.venstre {
+    display: flex; /* Placerer elementer på linje */
+    align-items: center; /* Centrerer indholdet vertikalt */
+    margin-left: 48px; /* Tilføjer afstand til venstre */
+    margin-right: 48px; /* Tilføjer afstand til højre */
+}
+
+.midte {
+    width: 75%; /* Sætter bredden til 75% */
+}
+
+.midte p a {
+    text-decoration: underline;
+}
+
+.midte h3 {
+    margin-bottom: 14px; /* Tilføjer afstand under overskriften */
+}
+
+.hoejre {
+    display: flex; /* Placerer elementer på linje */
+    width: 229px;
+    height: 118px;
+    margin-right: 35px;
+}
+
+.lokationer {
+    display: flex;
+    gap: 170px; /* Tilføjer afstand mellem lokationerne */
+}
+
+.faq {
+    margin-top: 35px;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.faqElement {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.faqMidte {
+    width: 87%;
+    margin-right: 35px;
+}
+
+span {
+    font-weight: bold;
+}
+
+.knapHoejre {
+    margin-top: 400px;
+    margin-right: 35px;
+}
+
+.knap {
+    background-color: #032478;
+    color: #FFF;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 25px !important; /* Indvendig afstand for knapperne */
+    white-space: nowrap; /* Forhindrer tekst i at gå over to linjer */
+    min-width: fit-content; /* Lader knappen tilpasse sig teksten */
+}
+
+.inputfelter {
+    display: flex; /* Placerer elementer på linje */
+    flex-direction: column; /* Stabler elementer lodret */
+    margin-top: 40px; /* Afstand over input felterne */
+}
+  
+.inputfelter input {
+    width: 500px !important; /* Gør input felterne fuld bredde */
+    margin-bottom: 15px; /* Afstand under hvert input felt */
+    box-sizing: border-box; /* Inkluder padding og border i elementets samlede bredde og højde */
+}
+
+.textarea input {
+    height: 200px;
+}
+

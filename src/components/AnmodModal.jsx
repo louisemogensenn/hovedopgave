@@ -29,7 +29,9 @@ export default function AnmodModal({ erAaben, luk, overskrift }) {
           <Inputfelt label="NAVN" type="text" />
           <Inputfelt label="VIRKSOMHED" type="text" />
           <Inputfelt label="E-MAIL" type="email" />
-          <Inputfelt label="ANMODNING" type="textarea" />
+          <aside className={mystyle.textarea}>
+            <Inputfelt label="ANMODNING" type="textarea" />
+          </aside>
         </form>
           
           <aside className={mystyle.knapper}>

@@ -3,10 +3,12 @@ import flueben from "../assets/flueben.svg";
 import Knap from "./Knap.jsx";
 import AnmodModal from "./AnmodModal.jsx";
 import { useState } from "react";
+import infoikon from "../assets/infoikon.svg";
 
-export default function Indholdsboks({ overskrift, tekst, dokument }) { // Når Indholdsboks kaldes, modtager den props: overskrift (der bruges til at angive overskriften), tekst, der bruges til at angive indholdsteksten, og dokument (et objekt, der indeholder oplysninger om dokumentet, herunder om det kan downloades direkte eller ej).
+export default function Indholdsboks({ overskrift, tekst, dokument, visKnap = true }) { // Når Indholdsboks kaldes, modtager den props: overskrift (der bruges til at angive overskriften), tekst, der bruges til at angive indholdsteksten, og dokument (et objekt, der indeholder oplysninger om dokumentet, herunder om det kan downloades direkte eller ej).
   const [erUdvidet, setErUdvidet] = useState(false); // State til at spore om teksten er udvidet eller ej
   const [erAnmodModalAaben, setErAnmodModalAaben] = useState(false); // State til at spore om anmodningsmodalen er åben eller ej
+  const [visInfoBoks, setVisInfoBoks] = useState(false); // State til at spore om infoboksen skal vises eller ej
 
   const haandterLaesMere = () => { // Kaldes når brugeren klikker på "Læs mere" eller "Læs mindre" knappen
     setErUdvidet(!erUdvidet); // Skifter tilstanden af erUdvidet mellem sand og falsk
@@ -20,8 +22,20 @@ export default function Indholdsboks({ overskrift, tekst, dokument }) { // Når 
     <>
       <section className={mystyle.ydreboks}>
         <section className={mystyle.indreboks}>
-          <article className={mystyle.venstre}>
-            <img className={mystyle.ikon} src={flueben} alt="Ikon-type" />
+        <aside className={mystyle.infoIkonContainer} onMouseEnter={() => setVisInfoBoks(true)} onMouseLeave={() => setVisInfoBoks(false)}>
+          <img className={mystyle.infoIkon} src={infoikon} alt="Info ikon" />
+          {visInfoBoks && (
+            <div className={mystyle.infoBesked}>
+              <p><strong>Overskrift:</strong> {overskrift}</p>
+              <p><strong>Type:</strong> {dokument.type}</p>
+              <p><strong>Opdateringsdato:</strong> {dokument.opdateringsdato}</p>
+              <p><strong>Størrelse:</strong> {dokument.stoerrelse}</p>
+              </div>
+            )}
+            </aside>
+            
+            <article className={mystyle.venstre}>
+              <img className={mystyle.ikon} src={flueben} alt="Ikon-type" />
           </article>
           <article className={mystyle.midte}>
             <h3>{overskrift}</h3>
@@ -37,13 +51,15 @@ export default function Indholdsboks({ overskrift, tekst, dokument }) { // Når 
               </button>
             )}
           </article>
-          <article className={mystyle.hoejre}>
-            {dokument.direkteDownload ? ( // Hvis dokumentet kan downloades direkte, vises en "Download" knap
-              <Knap knaptekst="Download" />
-            ) : (
-              <Knap knaptekst="Anmod" onClick={haandterAnmod} /> // Ellers vises en anmod-knap
+          {visKnap && (
+            <article className={mystyle.hoejre}>
+              {dokument.direkteDownload ? (
+                <Knap knaptekst="Download" />
+              ) : (
+              <Knap knaptekst="Anmod" onClick={haandterAnmod} />
+              )}
+              </article>
             )}
-          </article>
         </section>
       </section>
 

@@ -51,6 +51,10 @@
   box-sizing: border-box; /* Inkluder padding og border i elementets samlede bredde og højde */
 }
 
+.textarea input {
+  height: 100px;
+}
+
 .knapper {
   display: flex; /* Placerer knapper på linje */
   justify-content: space-between; /* Fordeler knapperne jævnt */

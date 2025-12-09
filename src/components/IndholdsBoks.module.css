@@ -4,6 +4,7 @@
 }
 
 .indreboks {
+    position: relative; /* Gør det muligt at placere absolutte elementer inden i */
     display: flex; /* Placerer elementer på linje */
     align-items: center; /* Centrerer indholdet vertikalt */
     border: 2px solid #032478; /* Tilføj kant */
@@ -13,6 +14,34 @@
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); /* Tilføjer skygge */
     padding-top: 35px; /* Tilføjer padding øverst */
     padding-bottom: 35px; /* Tilføj padding nederst */
+}
+
+.infoIkonContainer {
+    position: absolute; /* Gør det muligt at placere elementet absolut */
+    top: 11px; /* Placerer elementet 11px fra toppen */
+    right: 11px; /* Placerer elementet 11px fra højre */
+}
+
+.infoBesked {
+    position: absolute; /* Gør det muligt at placere elementet absolut */
+    top: 30px; /* Placerer elementet 30px fra toppen */
+    right: 0; /* Placerer elementet ved højre kant */
+    background: white; /* Hvid baggrund */
+    border: 2px solid #032478; /* Blå kant */
+    border-radius: 8px; /* Runder hjørnerne */
+    padding: 15px; /* Tilføjer padding */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Tilføjer skygge */
+    width: 250px; /* Sætter bredden til 250px */
+    z-index: 100; /* Sørger for at elementet er øverst */
+}
+
+.infoBesked p {
+    margin: 5px 0; /* Tilføjer margin over og under */
+    font-size: 14px; /* Sætter skriftstørrelsen */
+}
+
+.infoBesked strong {
+    color: #032478; /* Blå farve til fremhævning */
 }
 
 .ikon {
@@ -51,6 +80,7 @@
     color: rgb(0, 0, 0, 0.5); /* Grå tekstfarve */
     cursor: pointer; /* Angiver at det er klikbart */
     font-size: inherit;
+    margin-top: 10px;
   }
 
   .laesMereKnap:hover {
