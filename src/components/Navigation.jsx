@@ -4,9 +4,8 @@ import data from "../content.json";
 import { useState, useEffect } from 'react';
 
 export default function Navigation() {
-  const lokation = useLocation();
-  const navigate = useNavigate();
-  const sti = lokation.pathname;
+  const navigate = useNavigate(); // Bruger useNavigate hook til at navigere mellem forskellige ruter
+  const sti = useLocation().pathname; // Bruger useLocation hook til at få den nuværende sti
   const [isActive, setIsActive] = useState(false); // State for at styre label-aktivitet
   const [soegeTekst, setSoegeTekst] = useState(''); // State for at gemme søgeteksten
 

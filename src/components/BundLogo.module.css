@@ -1,6 +1,6 @@
 .bundLogo {
-    display: flex;
+    display: flex; /* Placerer elementerne på linje */
     justify-content: center; /* Placerer logoet i midten af sin container skærmen */
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 100px; /* Skaber en afstand til skærmens kant */
+    margin-bottom: 50px; /* Skaber afstand til elementer neden under */
 }

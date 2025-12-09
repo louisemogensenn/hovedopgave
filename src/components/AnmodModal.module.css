@@ -1,65 +1,65 @@
 .overlay {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  position: fixed; /* Gør overlayet fast på skærmen */
+  inset: 0; /* Dækker hele skærmen */
+  background-color: rgba(0, 0, 0, 0.5); /* Baggrunden er sløret */
+  z-index: 1000; /* Sørger for at overlayet er over andet indhold */
 }
 
 .modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 75px 125px;
-  border-radius: 8px;
-  width: 600px;
-  z-index: 1001;
-  border: 1px solid #032478;
+  position: fixed; /* Gør modal vinduet fast på skærmen */
+  top: 50%; /* Centrerer vertikalt */
+  left: 50%; /* Centrerer horisontalt */
+  transform: translate(-50%, -50%); /* Justerer positionen for perfekt centrering */
+  background: white; /* Hvid baggrund for modal vinduet */
+  padding: 75px 125px; /* Indvendig afstand */
+  border-radius: 8px; /* Runde hjørner */
+  width: 600px; /* Fast bredde */
+  z-index: 1001; /* Sørger for at modal vinduet er over overlayet */
+  border: 1px solid #032478; /* Blå kant */
 }
 
 .lukKnap {
-  position: absolute;
-  top: 30px;
-  left: 125px;
-  background: none;
-  border: none;
-  cursor: pointer;
+  position: absolute; /* Gør knappen fast i modal vinduet */
+  top: 30px; /* Afstand fra toppen */
+  left: 125px; /* Afstand fra venstre */
+  background: none; /* Ingen baggrund */
+  border: none; /* Ingen kant */
+  cursor: pointer; /* Gør cursoren til en pointer ved hover */
 }
 
 .modalOverskrifter {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  margin-bottom: 35px;
-  color: #032478;
+  display: flex; /* Placerer elementer på linje */
+  flex-direction: column; /* Stabler elementer lodret */
+  gap: 10px; /* Afstand mellem elementer */
+  align-items: center; /* Centrerer elementer horisontalt */
+  margin-bottom: 35px; /* Afstand under overskrifterne */
+  color: #032478; /* Blå tekstfarve */
 }
 
 .oeversteOverskrift {
-  color: #000 !important;
+  color: #000 !important; /* Sort farve for den øverste overskrift */
 }
 
 .inputfelter {
-  display: flex;
-  flex-direction: column;
-  margin-top: 40px;
+  display: flex; /* Placerer elementer på linje */
+  flex-direction: column; /* Stabler elementer lodret */
+  margin-top: 40px; /* Afstand over input felterne */
 }
 
 .modal form input {
-  width: 100% !important;
-  margin-bottom: 15px;
-  box-sizing: border-box;
+  width: 100% !important; /* Gør input felterne fuld bredde */
+  margin-bottom: 15px; /* Afstand under hvert input felt */
+  box-sizing: border-box; /* Inkluder padding og border i elementets samlede bredde og højde */
 }
 
 .knapper {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
+  display: flex; /* Placerer knapper på linje */
+  justify-content: space-between; /* Fordeler knapperne jævnt */
+  margin-top: 1rem; /* Afstand over knapperne */
 }
 
 .knapper button {
-  padding: 10px 25px !important;
+  padding: 10px 25px !important; /* Indvendig afstand for knapperne */
   white-space: nowrap; /* Forhindrer tekst i at gå over to linjer */
   min-width: fit-content; /* Lader knappen tilpasse sig teksten */
 }

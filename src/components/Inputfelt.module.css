@@ -1,29 +1,28 @@
 
-.wrapper {
-    position: relative;
+.indholdscontainer {
+    position: relative; /* For at placere label korrekt ift. dens absolute i .label */
 }
 
 .input {
-    width: 30%;
-    padding: 1rem;
-    border: 2px solid #032478;
-    border-radius: 8px;
-    outline: none;
+    width: 30%; /* Juster bredden sådan feltet fylder 30% i bredden */
+    padding: 1rem; /* Indvendig afstand for bedre klikområde */
+    border: 2px solid #032478; /* Blå kant */
+    border-radius: 8px; /* Afrundede hjørner */
+    outline: none; /* Fjern standard fokus-stil */
 }
 
 .label {
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-    padding: 0 0.25rem;
-    background-color: white;
-    color: #000;
-    pointer-events: none;
-    transition: all 0.2s;
+    position: absolute; /* Absolut positionering ift. .indholdscontainer så labelen kan placeres */
+    left: 1rem; /* Juster venstre afstand */
+    top: 1rem; /* Juster top afstand */
+    padding: 0 0.25rem; /* Lidt polstring for bedre læsbarhed */
+    background-color: white; /* Baggrundsfarve for at skjule input kant */
+    color: #000; /* Sort tekstfarve */
+    pointer-events: none; /* Gør label ikke-klikkbar */
+    transition: all 0.2s; /* Glidende overgang for position, når der klikkes i feltet */
 }
 
 .labelAktiv {
-    top: -0.50rem;
-    font-size: 0.875rem;
-    color: #000;
+    top: -0.50rem; /* Flytter label op når input er fokuseret eller har værdi */
+    color: #000; /* Sort tekstfarve */
 }

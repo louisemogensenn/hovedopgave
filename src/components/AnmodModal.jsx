@@ -6,7 +6,7 @@ import Kryds from '../assets/kryds.svg';
 
 export default function AnmodModal({ erAaben, luk, overskrift }) {
 
-  if (!erAaben) return null;
+  if (!erAaben) return null; // Returner null hvis modalen ikke er åben
 
   return (
     <>
