@@ -35,7 +35,7 @@ export default function AnmodModal({ erAaben, luk, overskrift }) {
           <h2>{overskrift}</h2>
         </section>
         
-        <p>
+        <p className={mystyle.topTekst}>
           {downloadState === 'faerdig' ? confirmationBesked : 
           beskrivelseAfAnmodaarsag
           }
@@ -51,7 +51,7 @@ export default function AnmodModal({ erAaben, luk, overskrift }) {
         </form>
           
           <aside className={mystyle.knapper}>
-            <Knap className={mystyle.knap} knaptekst="Afbryd" onClick={luk} />
+            <Knap className={mystyle.knap} knaptekst="Afbryd" onClick={luk} primaer={false}/>
             <button className={mystyle.knap} onClick={haandterKlik}>
               {downloadState === 'ikkePaabegyndt' && <p>Send anmodning</p>} {/* Hvis det er en download-knap og stadigt ikke er påbegyndt vises knapteksten */}
               {downloadState === 'loading' && ( // Hvis det er en downloadknap og stadiet er loading vises den roterende cirkel

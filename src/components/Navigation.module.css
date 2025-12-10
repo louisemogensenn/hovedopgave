@@ -53,3 +53,16 @@
     text-decoration-color: #032478; /* Farven på underline bliver blå */
     text-underline-offset: 8px; /* Underline placeres 8px fra teksten */
 }
+
+.navigation > a {
+    opacity: 0.5; /* Ikke-aktive links har halv opacity */
+    transition: opacity 0.3s ease; /* Blød overgang når opacity ændres */
+}
+
+.navigation > a:hover {
+    opacity: 1; /* Ved hover får link fuld opacity */
+}
+
+.navigation > a.aktiv {
+    opacity: 1; /* Aktivt link har fuld opacity */
+}

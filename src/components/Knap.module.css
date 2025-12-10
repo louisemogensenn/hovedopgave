@@ -18,6 +18,16 @@
     cursor: pointer; /* Cursor ændres til pointer ved hover */
 }
 
+.sekundaer {
+  width: 126px; /* Bredde på knappen */
+  height: 39px; /* Højde på knappen */
+  border: 2px solid #032478; /* Blå kant */
+  background-color: #FFF; /* Hvid baggrundsfarve */
+  color: #000; /* Sort tekstfarve */
+  border-radius: 30px; /* Runde hjørner */
+  cursor: pointer; /* Cursor ændres til pointer ved hover */
+}
+
 .preview {
     color: rgb(0, 0, 0, 0.5); /* Grå tekstfarve */
     cursor: pointer; /* Cursor ændres til pointer ved hover */

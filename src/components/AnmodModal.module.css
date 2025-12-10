@@ -15,6 +15,7 @@
   border-radius: 8px; /* Runde hjørner */
   z-index: 1001; /* Sørger for at modal vinduet er over overlayet */
   border: 1px solid #032478; /* Blå kant */
+  transition: all 0.3s ease; /* Glidende overgang for modal vinduet */
 }
 
 .lukKnap {
@@ -39,6 +40,10 @@
   color: #000 !important; /* Sort farve for den øverste overskrift */
 }
 
+.topTekst {
+  min-height: 50px; /* Minimum højde for top teksten */
+}
+
 .inputfelter {
   display: flex; /* Placerer elementer på linje */
   flex-direction: column; /* Stabler elementer lodret */
@@ -58,7 +63,7 @@
 .knapper {
   display: flex; /* Placerer knapper på linje */
   justify-content: space-between; /* Fordeler knapperne jævnt */
-  margin-top: 1rem; /* Afstand over knapperne */
+  margin-top: 30px; /* Afstand over knapperne */
 }
 
 .knapper button {
@@ -75,6 +80,9 @@
   border-radius: 30px; /* Runde hjørner */
   border: none; /* Ingen kant */
   cursor: pointer; /* Cursor ændres til pointer ved hover */
+  display: flex; /* Tilføj denne */
+  align-items: center; /* Tilføj denne */
+  justify-content: center; /* Tilføj denne */
 }
 
 .rotation {

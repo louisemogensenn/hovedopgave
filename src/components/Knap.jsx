@@ -3,7 +3,7 @@ import mystyle from "./Knap.module.css";
 import loadingEllipse from "../assets/loadingEllipse.svg";
 import fluebenDownload from "../assets/fluebenDownload.svg";
 
-export default function Knap({knaptekst, onClick}) {
+export default function Knap({knaptekst, onClick, primaer = true}) {
   const [downloadState, setDownloadState] = useState('ikkePaabegyndt'); // 'ikkePaabegyndt', 'loading', 'faerdig'
   
   const tekstIKnap = knaptekst.trim().toLowerCase(); // Fjern mellemrum og gør teksten små bogstaver
@@ -18,15 +18,14 @@ export default function Knap({knaptekst, onClick}) {
       }, 2000); // Skifter til flueben efter 2 sekunder
       
     } else {
-      // For andre knapper, kald bare onClick
-      if (onClick) onClick(e);
+      if (onClick) onClick(e); // For andre knapper, kald bare onClick
     }
   };
   
   return (
     <>
       <section className={mystyle.knapOgPreview}>
-        <button className={mystyle.knap} onClick={haandterKlik}>
+        <button className={primaer ? (mystyle.knap) : (mystyle.sekundaer)} onClick={haandterKlik}>
           {erDownload ? ( // Hvis det er en download-knap
             <>
               {downloadState === 'ikkePaabegyndt' && <p>{knaptekst}</p>} {/* Hvis det er en download-knap og stadigt ikke er påbegyndt vises knapteksten */}
