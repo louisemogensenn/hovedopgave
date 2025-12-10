@@ -20,7 +20,7 @@
 .lukKnap {
   position: absolute; /* Gør knappen fast i modal vinduet */
   top: 30px; /* Afstand fra toppen */
-  left: 80px; /* Afstand fra venstre */
+  right: 30px; /* Afstand fra venstre */
   background: none; /* Ingen baggrund */
   border: none; /* Ingen kant */
   cursor: pointer; /* Gør cursoren til en pointer ved hover */
@@ -65,4 +65,52 @@
   padding: 10px 25px !important; /* Indvendig afstand for knapperne */
   white-space: nowrap; /* Forhindrer tekst i at gå over to linjer */
   min-width: fit-content; /* Lader knappen tilpasse sig teksten */
+}
+
+.knap {
+  width: 126px; /* Bredde på knappen */
+  height: 39px; /* Højde på knappen */
+  background-color: #032478; /* Blå baggrundsfarve */
+  color: #FFF; /* Hvid tekstfarve */
+  border-radius: 30px; /* Runde hjørner */
+  border: none; /* Ingen kant */
+  cursor: pointer; /* Cursor ændres til pointer ved hover */
+}
+
+.rotation {
+  animation: spin 1s linear infinite; /* Rotation animation, der får cirklen til at rotere kontinuerligt. Animationen kalder spin der er keyframes */
+}
+
+/* Frames for rotation animation */
+@keyframes spin {
+  from {
+      transform: rotate(0deg); /* Start rotation ved 0 grader, så cirklens udgangspunkt */
+  }
+  to {
+      transform: rotate(360deg); /* Afslut rotation ved 360 grader, hvilket fuldfører en fuld rotation */
+  }
+}
+
+.flueben {
+  width: 6px; /* Start bredde på fluebenet */
+  height: 6px; /* Start højde på fluebenet */
+  animation: fluebenVoksende 0.4s ease-out forwards; /* Animation for at få fluebenet til at vokse. Animationen kalder fluebenVoksende der er keyframes */
+}
+
+/* Frames for flueben vokse animation */
+@keyframes fluebenVoksende {
+  0% {
+    width: 6px; /* Startbredde */
+    height: 6px; /* Starthøjde */
+    opacity: 0; /* Starter usynlig */
+  }
+
+  50% {
+    opacity: 1; /* Gør fluebenet synligt halvvejs gennem animationen */
+  }
+  
+  100% {
+    width: 23px; /* Slutbredde */
+    height: 23px; /* Sluthøjde */
+  }
 }

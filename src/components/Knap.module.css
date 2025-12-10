@@ -1,24 +1,62 @@
 .knapOgPreview {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-right: 35px;
-    margin-left: 35px;
-    gap: 4px;
+    display: flex; /* Brug flexbox til at arrangere knap og preview side om side */
+    flex-direction: column; /* Arranger elementerne lodret */
+    justify-content: center; /* Centrer lodret */
+    align-items: center; /* Centrer horisontalt */
+    margin-right: 35px; /* Skaber en afstand til højre på 35px */
+    margin-left: 35px; /* Skaber en afstand til venstre på 35px */
+    gap: 4px; /* Afstand mellem knap og preview */
 }
 
 .knap {
-    width: 126px;
-    height: 39px;
-    background-color: #032478;
-    color: #FFF;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
+    width: 126px; /* Bredde på knappen */
+    height: 39px; /* Højde på knappen */
+    background-color: #032478; /* Blå baggrundsfarve */
+    color: #FFF; /* Hvid tekstfarve */
+    border-radius: 30px; /* Runde hjørner */
+    border: none; /* Ingen kant */
+    cursor: pointer; /* Cursor ændres til pointer ved hover */
 }
 
 .preview {
     color: rgb(0, 0, 0, 0.5); /* Grå tekstfarve */
-    cursor: pointer;
+    cursor: pointer; /* Cursor ændres til pointer ved hover */
 }
+
+.rotation {
+    animation: spin 1s linear infinite; /* Rotation animation, der får cirklen til at rotere kontinuerligt. Animationen kalder spin der er keyframes */
+}
+
+/* Frames for rotation animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg); /* Start rotation ved 0 grader, så cirklens udgangspunkt */
+    }
+    to {
+        transform: rotate(360deg); /* Afslut rotation ved 360 grader, hvilket fuldfører en fuld rotation */
+    }
+  }
+  
+  .flueben {
+    width: 6px; /* Start bredde på fluebenet */
+    height: 6px; /* Start højde på fluebenet */
+    animation: fluebenVoksende 0.4s ease-out forwards; /* Animation for at få fluebenet til at vokse. Animationen kalder fluebenVoksende der er keyframes */
+  }
+  
+  /* Frames for flueben vokse animation */
+  @keyframes fluebenVoksende {
+    0% {
+      width: 6px; /* Startbredde */
+      height: 6px; /* Starthøjde */
+      opacity: 0; /* Starter usynlig */
+    }
+
+    50% {
+      opacity: 1; /* Gør fluebenet synligt halvvejs gennem animationen */
+    }
+    
+    100% {
+      width: 23px; /* Slutbredde */
+      height: 23px; /* Sluthøjde */
+    }
+  }
