@@ -57,7 +57,7 @@
 }
 
 .textarea input {
-  height: 100px;
+  height: 100px; /* Fast højde for at minimere hop i skiftet */
 }
 
 .knapper {

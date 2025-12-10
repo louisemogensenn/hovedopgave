@@ -1,6 +1,17 @@
+.bundLogoOgPil {
+    margin-top: 100px; /* Skaber en afstand til skærmens kant */
+    margin-bottom: 50px; /* Skaber afstand til elementer neden under */
+}
+
 .bundLogo {
     display: flex; /* Placerer elementerne på linje */
     justify-content: center; /* Placerer logoet i midten af sin container skærmen */
-    margin-top: 100px; /* Skaber en afstand til skærmens kant */
-    margin-bottom: 50px; /* Skaber afstand til elementer neden under */
+}
+
+.tilTopPil {
+    display: flex;
+    justify-content: end;
+    margin-top: -50px;
+    margin-right: 5%;
+    cursor: pointer;
 }

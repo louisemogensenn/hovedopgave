@@ -115,12 +115,12 @@ export default function Om() {
                   <Inputfelt label="SPØRGSMÅL" type="text" />
                 </aside>
               </article>
+              <p>Du kan altid kontakte vores compliance-ansvarlige Jens Jensen på +45 12 34 56 78 eller jj@dmjx.dk</p>
           </article>
 
           <article className={mystyle.knapHoejre}>
             <button className={mystyle.knap}><p>Send spørgsmål</p></button>
           </article>
-
         </section>
       </section>
     </>

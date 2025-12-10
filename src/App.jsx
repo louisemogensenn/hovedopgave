@@ -1,5 +1,5 @@
 import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate} from "react-router-dom";
 import Layout from "./Layout";
 import Om from "./views/Om";
 import GDPR from "./views/GDPR";
@@ -11,6 +11,10 @@ const Router = createBrowserRouter([
     path: "/",
     element: <Layout />, // Layout-komponenten bruges som det overordnede layout - altså den ramme om indholder, der altid vises
     children: [
+      {
+        index: true,
+        element: <Navigate to="/om" replace />, // Når brugeren navigerer til rod-URL'en (/), omdirigeres de automatisk til /om
+      },
       {
         path: '/om',
         element: <Om />, // Komponentet Om vises, når brugeren navigerer til /om
@@ -25,7 +29,7 @@ const Router = createBrowserRouter([
         element: <ItSikkerhed />, // Komponentet ItSikkerhed vises, når brugeren navigerer til /itSikkerhed
       },
       {
-        path: 'soeg',
+        path: '/soeg',
         element: <Soeg /> // Komponentet Soeg vises, når brugeren navigerer til /soeg
       },
     ],
