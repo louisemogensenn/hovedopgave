@@ -13,8 +13,8 @@ export default function BundLogo() {
     <>
     <article className={mystyle.bundLogoOgPil}>
       <section className={mystyle.bundLogo}>
-        <Link to="https://www.dotlegal.com/en/">
-        <img src={bundLogoSvg} alt=".legal logo - Compliance Software" />
+        <Link to="https://www.dotlegal.com/en/" target="_blank">
+          <img src={bundLogoSvg} alt=".legal logo - Compliance Software" />
         </Link>
       </section>
       <aside className={mystyle.tilTopPil}>
