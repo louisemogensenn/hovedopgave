@@ -2,7 +2,6 @@
 .ydreArticle {
     display: flex; /* Placerer elementerne på linje */
     justify-content: center; /* Placerer elementerne i midten */
-    cursor: pointer; /* Gør cursoren til en pointer ved hover */
 }
 
 .logoSektion {
@@ -10,7 +9,7 @@
     justify-content: space-between; /* Alt pladsen i containeren placeres MELLEM de to sektioner */
     margin-top: 48px; /* Skaber afstand mellem toppen af siden og indholdet */
     align-items: center; /* Indholdet placeres i midten vertikalt */
-    width: 90%;
+    width: 90%; /* Bredden af logo sektionen */
 }
 
 /* DMJX-logo */

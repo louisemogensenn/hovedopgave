@@ -29,6 +29,7 @@
 
 .modalOverskrifter {
   display: flex; /* Placerer elementer på linje */
+  justify-content: center; /* Centrerer elementer horisontalt */
   flex-direction: column; /* Stabler elementer lodret */
   gap: 10px; /* Afstand mellem elementer */
   align-items: center; /* Centrerer elementer horisontalt */

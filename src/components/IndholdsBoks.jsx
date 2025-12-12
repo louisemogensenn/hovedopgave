@@ -5,7 +5,7 @@ import AnmodModal from "./AnmodModal.jsx";
 import { useState } from "react";
 import infoikon from "../assets/infoikon.svg";
 
-export default function Indholdsboks({ overskrift, tekst, dokument, visKnap = true }) { // Når Indholdsboks kaldes, modtager den props: overskrift (der bruges til at angive overskriften), tekst, der bruges til at angive indholdsteksten, og dokument (et objekt, der indeholder oplysninger om dokumentet, herunder om det kan downloades direkte eller ej).
+export default function Indholdsboks({ overskrift, tekst, dokument }) { // Når Indholdsboks kaldes, modtager den props: overskrift (der bruges til at angive overskriften), tekst, der bruges til at angive indholdsteksten, og dokument (et objekt, der indeholder oplysninger om dokumentet, herunder om det kan downloades direkte eller ej).
   const [erUdvidet, setErUdvidet] = useState(false); // State til at spore om teksten er udvidet eller ej
   const [erAnmodModalAaben, setErAnmodModalAaben] = useState(false); // State til at spore om anmodningsmodalen er åben eller ej
   const [visInfoBoks, setVisInfoBoks] = useState(false); // State til at spore om infoboksen skal vises eller ej
@@ -51,7 +51,6 @@ export default function Indholdsboks({ overskrift, tekst, dokument, visKnap = tr
               </button>
             )}
           </article>
-          {visKnap && (
             <article className={mystyle.hoejre}>
               {dokument.direkteDownload ? (
                 <Knap knaptekst="Download" />
@@ -59,7 +58,6 @@ export default function Indholdsboks({ overskrift, tekst, dokument, visKnap = tr
               <Knap knaptekst="Anmod" onClick={haandterAnmod} />
               )}
               </article>
-            )}
         </section>
       </section>
 

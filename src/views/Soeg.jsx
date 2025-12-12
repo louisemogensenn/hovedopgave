@@ -7,7 +7,7 @@ import mystyle from "./Soeg.module.css";
 export default function Soeg() {
   const location = useLocation(); // Returnerer location-objektet, der indeholder oplysninger om den aktuelle URL
   let soegeTekst = ""; // Søgeteksten er en tom streng som standard
-  if (location.state && location.state.soegeTekst) { // Hvis der findes en søgetekst i location.state der hentes fra Navigation.jsx og brugeren har skrevet noget i søgefeltet, der også hentes fra Navigation.jsx
+  if (location.state && location.state.soegeTekst) { // Hvis der findes et state-objekt og har dette stateobjekt en soegeTekst (denne er relevant hvis brugeren refresher siden eller navigerer tilbage til søgesiden)
     soegeTekst = location.state.soegeTekst; // Opdateres søgetekst med den tekst brugeren har skrevet i søgefeltet
   }
   const [resultater, setResultater] = useState([]); // State til at gemme søgeresultater

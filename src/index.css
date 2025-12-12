@@ -52,23 +52,23 @@ p {
 /* Vis beskeden på skærme smallere end 768px */
 @media (max-width: 768px) {
   .mobilAdvarsel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: white;
-    z-index: 9999;
-    padding: 20px;
-    text-align: center;
+    display: flex; /* Gør beskeden synlig */
+    justify-content: center; /* Centrer indholdet horisontalt */
+    align-items: center; /* Centrer indholdet vertikalt */
+    position: fixed; /* Beskeden på skærmen */
+    top: 0; /* Placerer øverst */
+    left: 0; /* Placerer til venstre */
+    width: 100%; /* Fylder hele bredden */
+    height: 100vh; /* Fylder hele højden */
+    background-color: white; /* Hvid baggrundsfarve */
+    z-index: 9999; /* Sørger for at beskeden ligger øverst */
+    padding: 20px; /* Lidt padding omkring teksten */
+    text-align: center; /* Centrer teksten */
   }
 
   /* Skjul alt andet indhold */
   #root > *:not(.mobilAdvarsel) {
-    display: none;
+    display: none; /* Skjuler alt andet indhold */
   }
   /* I div'en med id'et root gælder for alle (*) elementer - undtaget .mobilAdvarsel */
 }
